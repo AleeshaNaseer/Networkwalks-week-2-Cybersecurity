@@ -1,0 +1,58 @@
+The six tools selected were:
+
+WHOIS,WhatWeb,Nslookup,Curl,Wafw00f,DNSRecon
+
+Tools Used:
+
+WHOIS:
+
+Collects domain registration and registrar information.
+
+
+
+
+
+
+
+WhatWeb:
+
+Fingerprints website technologies, CMS platforms, plugins, and server details.
+
+Nslookup
+
+Performs DNS queries to identify domain IP addresses and DNS records.
+
+Curl
+
+Communicates with web servers and retrieves HTTP response information.
+
+Wafw00f
+
+Identifies whether a website is protected by a Web Application Firewall.
+
+DNSRecon
+
+Performs DNS enumeration and collects domain infrastructure information.
+What I Learned
+During this project, I learned:
+
+Basic website footprinting
+Basic reconnaissance techniques
+How to use WHOIS
+How to use WhatWeb
+How to identify website technologies
+How to use Nslookup
+How to resolve a domain to an IP address
+How to check HTTP headers using Curl
+How to identify a Web Application Firewall using Wafw00f
+How to collect DNS information using DNSRecon
+How to analyze publicly available information
+How reconnaissance is used during the initial phase of a security assessment
+The importance of authorization in cybersecurity
+How to document reconnaissance findings professionally
+
+
+8. Evidence Collected
+Screenshots collected during the activities:
+WHOIS
+Screenshot showing the WHOIS command and output for the authorized domain.

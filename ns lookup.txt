@@ -1,0 +1,8 @@
+┌──(kali㉿kali)-[~]
+└─$ nslookup networkwalks.com
+Server:         10.95.9.217
+Address:        10.95.9.217#53
+
+Non-authoritative answer:
+Name:   networkwalks.com
+Address: 192.232.216.135

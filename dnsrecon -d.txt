@@ -1,0 +1,15 @@
+┌──(kali㉿kali)-[~]
+└─$ dnsrecon -d networkwalks.com
+2026-11-14T05:23:04.151404+0500 INFO Starting enumeration for domain: networkwalks.com
+2026-11-14T05:23:04.153610+0500 INFO std: Performing General Enumeration against: networkwalks.com...
+2026-11-14T05:23:05.192330+0500 ERROR No answer for DNSSEC query for networkwalks.com
+2026-11-14T05:23:06.080656+0500 INFO      SOA ns6135.hostgator.com 50.87.144.87
+2026-11-14T05:23:06.906299+0500 INFO      NS ns6135.hostgator.com 50.87.144.87
+2026-11-14T05:23:07.936432+0500 INFO      Bind Version for 50.87.144.87 "9.16.23-RH"
+2026-11-14T05:23:07.938074+0500 INFO      NS ns6136.hostgator.com 192.232.216.131
+2026-11-14T05:23:09.101080+0500 INFO      Bind Version for 192.232.216.131 "9.16.23-RH"
+2026-11-14T05:23:10.821874+0500 INFO      MX mail.networkwalks.com 192.232.216.135
+2026-11-14T05:23:10.837931+0500 INFO      A networkwalks.com 192.232.216.135
+2026-11-14T05:23:12.154829+0500 INFO      TXT networkwalks.com google-site-verification=rr04eRmqHoWY3XemnizDNVK4q75X-Ij-mjgEeg-UsYI
+2026-11-14T05:23:12.155961+0500 INFO      TXT networkwalks.com v=spf1 +a +mx +ip4:50.87.144.87 +include:websitewelcome.com ~all
+2026-11-14T05:23:13.073295+0500 INFO Enumerating SRV Records

@@ -1,0 +1,366 @@
+W2-PM1 – MULTIPLE KALI TOOLS
+W2-PM1 | CYBERSECURITY | NETWORKWALKS
+
+Project Information
+
+| Field | Detail |
+|---|---|
+| Pentester Name | Aleesha Naseer |
+| Program/Batch | B084-Networkwalks |
+| Date | 13 nov 2026 |
+| Module Completed | W2-PM2 – Multiple Kali Tools |
+| Client/Target | Networkwalks (networkwalks.com) |
+| Permission Secured | Yes – Written permission |
+| Phase Covered | Phase 1: Reconnaissance and Footprinting |
+
+1. Liability Disclaimer
+
+I performed these activities only on the authorized target networkwalks.com with permission as part of my cybersecurity internship.
+
+This project was completed for educational and professional training purposes.
+
+The objective was to understand website footprinting and reconnaissance using multiple Kali Linux tools.
+
+All activities were performed within the authorized scope. No unauthorized exploitation, modification, or disruption of the target website was intended.
+
+Cybersecurity tools must only be used against systems for which proper authorization has been obtained.
+
+2. Introduction
+
+Website footprinting is one of the first activities performed during a cybersecurity assessment. It involves collecting information about a target website, domain, server, and network infrastructure.
+
+Before conducting vulnerability assessments or penetration testing, cybersecurity professionals need to understand the target environment. This information helps them identify technologies, services, DNS configurations, and publicly available information.
+
+In this practical activity, I used six Kali Linux tools to perform reconnaissance on the authorized domain:
+networkwalks.com
+
+The six tools selected were:
+
+1. WHOIS
+2. WhatWeb
+3. Nslookup
+4. Curl
+5. Wafw00f
+6. DNSRecon
+
+Each tool performs a different function. By combining their results, I developed a better understanding of the website's digital infrastructure.
+3. Objectives
+
+The main objectives of this activity were:
+
+- Understand the concept of website footprinting.
+- Learn how reconnaissance is performed.
+- Identify domain registration information.
+- Discover website technologies and CMS platforms.
+- Resolve domain names into IP addresses.
+- Examine HTTP response headers.
+- Identify Web Application Firewall technologies.
+- Collect DNS records.
+- Understand the importance of information gathering in cybersecurity.
+
+4. Tools Used
+
+| Tool | Detailed Purpose |
+|---|---|
+| Kali Linux | Provides a Linux-based environment for cybersecurity testing and reconnaissance. |
+| WHOIS | Collects domain registration and registrar information. |
+| WhatWeb | Fingerprints website technologies, CMS platforms, plugins, and server details. |
+| Nslookup | Performs DNS queries to identify domain IP addresses and DNS records. |
+| Curl | Communicates with web servers and retrieves HTTP response information. |
+| Wafw00f | Identifies whether a website is protected by a Web Application Firewall. |
+| DNSRecon | Performs DNS enumeration and collects domain infrastructure information. |
+
+5. Activities Performed
+
+5.1 WHOIS – Domain Information Gathering
+
+Introduction
+
+WHOIS is a domain lookup utility that provides publicly available information about registered domain names.
+
+When a domain is registered, information about the registrar, registration status, name servers, and registration dates is maintained through domain registration systems.
+
+WHOIS helps security professionals understand the registration history and administrative information associated with a domain.
+
+Command
+
+`whois networkwalks.com`
+
+Working Principle:
+
+1. The user enters a domain name.
+2. WHOIS queries an appropriate registration service.
+3. The service returns available domain registration information.
+4. The user examines the returned records.
+
+Information That Can Be Collected
+
+- Domain name.
+- Domain registrar.
+- Registration date.
+- Expiration date.
+- Updated date.
+- Domain status.
+- Name servers.
+- Public registration contact information, if available.
+
+Finding:
+
+WHOIS was used to collect publicly available registration and name server information for networkwalks.com.
+
+What I Learned:
+
+I learned how domain registration information can be collected using WHOIS. I also understood that domain registration records help security professionals identify basic administrative information about a website.
+
+5.2 WhatWeb – Website Technology Identification
+
+Introduction
+
+WhatWeb is a website fingerprinting tool used to identify the technologies running on a website.
+
+Websites use different technologies, including content management systems, programming languages, JavaScript libraries, plugins, and web servers.
+
+WhatWeb analyzes website responses and identifies recognizable technology signatures.
+
+Command
+
+`whatweb networkwalks.com`
+
+Working Principle
+
+1. WhatWeb sends a request to the specified website.
+2. It examines the website response.
+3. It identifies recognizable technology signatures.
+4. It displays the technologies detected.
+
+Information That Can Be Collected
+
+- Content Management System (CMS).
+- Website plugins.
+- Server technologies.
+- Programming frameworks.
+- JavaScript libraries.
+- HTTP-related information.
+
+
+
+
+
+What I Learned
+
+I learned how WhatWeb performs website fingerprinting and identifies technologies used by web applications.
+
+5.3 Nslookup – DNS Resolution
+
+Introduction
+
+Nslookup stands for Name Server Lookup. It is a command-line tool used to query Domain Name System (DNS) servers.
+
+DNS translates human-readable domain names into IP addresses that computers use to communicate over networks.
+
+For example, users can access a website through its domain name instead of remembering its numerical IP address.
+
+Command
+
+`nslookup networkwalks.com`
+
+Working Principle
+
+1. The user enters a domain name.
+2. Nslookup sends a DNS query.
+3. The DNS server processes the request.
+4. The server returns the corresponding DNS information.
+5. The result displays the resolved IP address when available.
+
+
+
+DNS resolution is important because it helps security professionals:
+
+- Identify IP addresses associated with domains.
+- Understand domain-to-IP relationships.
+- Troubleshoot DNS problems.
+- Investigate network infrastructure.
+- Identify DNS configuration issues.
+
+What I Learned
+
+I learned how DNS translates domain names into IP addresses and how Nslookup can be used during reconnaissance.
+
+5.4 Curl – HTTP Response Analysis
+
+Introduction
+
+Curl is a command-line utility used to transfer data between systems through different network protocols.
+
+In web security, Curl is frequently used to communicate with web servers and inspect HTTP responses.
+
+HTTP response headers provide information about how a server handles requests and returns content.
+
+Command
+
+`curl -I https://networkwalks.com`
+
+Working Principle
+
+1. Curl sends an HTTP HEAD request.
+2. The web server processes the request.
+3. The server returns HTTP response headers.
+4. Curl displays the returned response information.
+
+Information That Can Be Collected
+
+- HTTP status code.
+- Server response information.
+- Content type.
+- Content length.
+- Redirect information.
+- Security-related response headers.
+- Other available HTTP headers.
+
+
+What I Learned
+
+I learned how Curl can be used to inspect HTTP response headers and understand communication between a browser and a web server.
+
+5.5 Wafw00f – Web Application Firewall Detection
+
+Introduction
+
+Wafw00f is a security tool designed to identify Web Application Firewalls.
+
+A Web Application Firewall (WAF) is a security mechanism that monitors and filters HTTP and HTTPS traffic between users and web applications.
+
+It helps protect websites against malicious requests and common web-based attacks.
+
+Command
+
+`wafw00f https://networkwalks.com`
+
+Working Principle
+
+1. Wafw00f sends requests to the target website.
+2. It analyzes the responses.
+3. It checks for recognizable WAF behavior and signatures.
+4. It identifies a possible WAF product when a match is found.
+
+
+Importance of a WAF
+
+A WAF can help protect websites against:
+
+- SQL injection attempts.
+- Cross-site scripting attempts.
+- Malicious HTTP requests.
+- Suspicious web traffic.
+- Certain application-layer attacks.
+
+Analysis:
+
+The identification of ModSecurity indicates that the website uses a recognized web application protection technology.
+
+However, WAF detection alone does not confirm that every attack is prevented or that the website is completely secure.
+
+What I Learned
+
+I learned the purpose of a Web Application Firewall and how Wafw00f can help identify WAF technologies used by websites.
+
+5.6 DNSRecon – DNS Enumeration
+
+Introduction
+
+DNSRecon is a DNS enumeration tool used to gather information about a domain's DNS infrastructure.
+
+DNS records provide information about how a domain is configured and how different internet services are connected.
+
+DNSRecon can collect different types of DNS records and help security professionals understand the target's domain infrastructure.
+
+Command
+
+`dnsrecon -d networkwalks.com`
+
+Working Principle
+
+1. DNSRecon receives the target domain.
+2. It performs DNS queries.
+3. It collects available DNS records.
+4. It organizes the information into results.
+5. The user analyzes the collected information.
+
+Information That Can Be Collected
+
+- NS records: Identify authoritative name servers.
+- MX records: Identify mail servers.
+- A records: Identify IPv4 addresses.
+- AAAA records: Identify IPv6 addresses.
+- TXT records: Contain text-based DNS information.
+- SPF records: Help specify authorized email-sending servers.
+- SRV records: Identify services and their associated servers.
+
+Finding
+
+The results provided information about:
+
+- Name servers.
+- Mail servers.
+- SPF/TXT records.
+- Service records.
+- DNS information.
+
+Importance
+
+DNS information helps security professionals understand the infrastructure associated with a domain.
+
+It can also help identify configuration mistakes and unnecessary publicly available records.
+What I Learned
+
+I learned how DNSRecon collects DNS-related information and why DNS enumeration is an important part of website footprinting.
+
+6. Risk Analysis / Impact
+
+| # | Risk / Finding | Evidence / Observation | Potential Impact | Risk Level |
+|---|---|---|---|---|
+| 1 | Website technology information exposed | WhatWeb identified WordPress and WP Download Manager | May help identify software components requiring security review | Medium |
+| 2 | Server IP address identifiable | Nslookup resolved the domain to 192.232.216.135 | Reveals the IP address associated with the domain | Low |
+| 3 | HTTP information exposed | Curl returned HTTP response information and /wp-json/ | May reveal application structure and publicly available API resources | Medium |
+| 4 | WAF technology detected | Wafw00f identified ModSecurity | Reveals information about website security infrastructure | Low |
+| 5 | DNS information discoverable | DNSRecon identified NS, MX, SPF/TXT and service records | May help researchers understand domain infrastructure | Low |
+
+These observations are not confirmed vulnerabilities. Risk levels represent preliminary assessment, not verified exploitation results.
+
+7. Recommendations
+
+1. Regularly review publicly available domain information.
+2. Keep WordPress and plugins updated.
+3. Remove unnecessary technology and version information where possible.
+4. Review HTTP response headers.
+5. Ensure WordPress API resources expose only appropriate information.
+6. Properly configure and monitor ModSecurity.
+7. Review DNS records regularly.
+8. Protect sensitive domain and server information.
+9. Conduct regular authorized security assessments.
+10. Monitor changes in publicly available website information.
+
+8. What I Learned
+
+During this activity, I learned:
+
+- Website footprinting and reconnaissance.
+- Domain registration lookup using WHOIS.
+- Website technology identification using WhatWeb.
+- DNS resolution using Nslookup.
+- HTTP response analysis using Curl.
+- Web Application Firewall detection using Wafw00f.
+- DNS enumeration using DNSRecon.
+- Analysis of publicly available information.
+- How reconnaissance supports cybersecurity assessments.
+- The importance of responsible information gathering.
+
+9. Conclusion
+
+This activity provided practical knowledge of website footprinting using six Kali Linux tools.
+
+I successfully studied how WHOIS collects domain registration information, WhatWeb identifies website technologies, Nslookup resolves domain names, Curl examines HTTP responses, Wafw00f detects Web Application Firewalls, and DNSRecon collects DNS information.
+
+The activity improved my understanding of website infrastructure and the importance of reconnaissance before performing further security assessments.
+
+
